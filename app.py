@@ -13,17 +13,10 @@ from forms import HiremeForm
 
 app = Flask(__name__)
 
-app.config['NOTION_API_KEY'] = "secret_JWOHlDkr92kgzI5eXLqNK90SuSEpWeU8uasvdDf8cyo"
 NOTION_API_KEY = "secret_JWOHlDkr92kgzI5eXLqNK90SuSEpWeU8uasvdDf8cyo"
-app.config['DATABASE_ID'] = "076ee42772584168aac60bd2b8366ce6" 
 DATABASE_ID= "076ee42772584168aac60bd2b8366ce6" 
-# app.config['MONGO_URI'] = 'mongodb+srv://rockbottom0111:0iGRT5lPNMLIRskC@cluster0.lmyxnuh.mongodb.net/local'
+
 app.config['SECRET_KEY'] = '6e6cf3f875a3a73830d88caf'
-# app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
-# app.config['MONGODB_SETTINGS'] = {
-#     'db': 'local',
-#     'host': 'mongodb+srv://rockbottom0111:0iGRT5lPNMLIRskC@cluster0.lmyxnuh.mongodb.net/'
-# }
 
 # Mail config
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'

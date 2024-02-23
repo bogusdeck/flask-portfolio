@@ -1,35 +1,36 @@
 {% extends "moyemoye.html" %} {% block content %}
-<div class="w-5/6 rounded-[14px] border-4 border-black">
+<div class="w-5/6 ml-5 rounded-[14px] border-4 border-black scale-75">
     <!-- <img class="rounded-[14px] border-4 border-black" src="/static/mysite/bg.png"> -->
-    <div class="w-full flex flex-col justify-start items-start bg-[#F1EBDD] rounded-t-[14px] border-4 border-black ">
+    <div class="w-full flex justify-start items-start bg-[#F1EBDD] rounded-t-[11px] border-b-4 border-black ">
       <div class="relative group">
-        <img class="" src="/static/mysite/circle.png">
+        <img class="m-[1.5px] scale-75" src="/static/mysite/circle.png">
         <!-- <img class="" src="/static/mysite/close_hover.png"> -->
       </div>
       <div class="relative group">
-        <img class="" src="/static/mysite/circle.png">
+        <img class="m-[1.5px] scale-75" src="/static/mysite/circle.png">
         <!-- <img class="" src="/static/mysite/floating_hover.png"> -->
       </div>
     </div>
+
     <div class="flex justify-center items-center">
-        <div class="w-fit flex justify-center items-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black ">
-            
-            <div class="flex justify-center items-center p-2 text-stone-900 text-[45px] font-bold font-['Roboto Mono']">
+        <div class="w-fit flex m-2 justify-center items-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black ">
+            <div class="flex justify-center items-center px-6 text-stone-900 text-[30px] font-bold font-['Roboto Mono']">
                 BLOGS
             </div>
-
         </div>
     </div>
+
     {% for entry in entries %}
-    <div class="mb-8 bg-white p-6 rounded-lg shadow-md flex">
+    <a href="{{entry['url']}}">
+    <div class="m-8 bg-[#F1EBDD] text-stone-900 p-3 rounded-[14px] shadow-md flex border-2 border-black">
         <div class="flex-1">
-            <h2 class="text-2xl font-semibold mb-4">
+            <h2 class="text-xl font-semibold mb-2">
                 {{ entry['properties']['Title']['title'][0]['text']['content'] }}
             </h2>
             <p class="text-gray-600">
                 {{ entry['properties']['summary']['rich_text'][0]['text']['content'] }}
             </p>
-            <!-- Display categories/tags -->
+            
             <div class="mt-4">
                 {% for category in entry['properties']['categories']['multi_select'] %}
                 <span class="bg-gray-300 text-gray-700 px-2 py-1 rounded-full mr-2">
@@ -38,24 +39,26 @@
                 {% endfor %}
             </div>
         </div>
-    </div>
+    </div> 
+    </a>
+
     {% endfor %}
     <!-- Pagination -->
-    <div class="my-8">
+    <div class="my-8 flex justify-center items-center">
         {% if page > 1 %}
-        <a href="{{ url_for('blog', page=page-1) }}" class="bg-blue-500 text-white px-4 py-2 rounded-md">
+        <a href="{{ url_for('blog', page=page-1) }}" class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
             Previous Page
-        </a
-    >
+        </a>
         {% endif %} {% if has_next_page %}
-        <a href="{{ url_for('blog', page=page+1) }}" class="bg-blue-500 text-white px-4 py-2 rounded-md ml-2">
+        <a href="{{ url_for('blog', page=page+1) }}" class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
             Next Page
-        </a
-    >
+        </a>
         {% endif %}
     </div>
 </div>
+
 {% endblock content %}
+
 <div class="w-[1204px] h-[50px] relative scale-75">
     <div class="w-[1204px] h-[749px] left-0 top-[-1px] absolute">
         <img class="w-[1204px] h-[749px] left-0 top-0 absolute rounded-[14px] border-4 border-black" src="/static/mysite/bg.png">
