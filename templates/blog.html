@@ -1,0 +1,117 @@
+{% extends "moyemoye.html" %} {% block content %}
+<div class="w-5/6 rounded-[14px] border-4 border-black">
+    <!-- <img class="rounded-[14px] border-4 border-black" src="/static/mysite/bg.png"> -->
+    <div class="w-full flex flex-col justify-start items-start bg-[#F1EBDD] rounded-t-[14px] border-4 border-black ">
+      <div class="relative group">
+        <img class="" src="/static/mysite/circle.png">
+        <!-- <img class="" src="/static/mysite/close_hover.png"> -->
+      </div>
+      <div class="relative group">
+        <img class="" src="/static/mysite/circle.png">
+        <!-- <img class="" src="/static/mysite/floating_hover.png"> -->
+      </div>
+    </div>
+    <div class="flex justify-center items-center">
+        <div class="w-fit flex justify-center items-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black ">
+            
+            <div class="flex justify-center items-center p-2 text-stone-900 text-[45px] font-bold font-['Roboto Mono']">
+                BLOGS
+            </div>
+
+        </div>
+    </div>
+    {% for entry in entries %}
+    <div class="mb-8 bg-white p-6 rounded-lg shadow-md flex">
+        <div class="flex-1">
+            <h2 class="text-2xl font-semibold mb-4">
+                {{ entry['properties']['Title']['title'][0]['text']['content'] }}
+            </h2>
+            <p class="text-gray-600">
+                {{ entry['properties']['summary']['rich_text'][0]['text']['content'] }}
+            </p>
+            <!-- Display categories/tags -->
+            <div class="mt-4">
+                {% for category in entry['properties']['categories']['multi_select'] %}
+                <span class="bg-gray-300 text-gray-700 px-2 py-1 rounded-full mr-2">
+                    {{ category['name'] }}
+                </span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <!-- Pagination -->
+    <div class="my-8">
+        {% if page > 1 %}
+        <a href="{{ url_for('blog', page=page-1) }}" class="bg-blue-500 text-white px-4 py-2 rounded-md">
+            Previous Page
+        </a
+    >
+        {% endif %} {% if has_next_page %}
+        <a href="{{ url_for('blog', page=page+1) }}" class="bg-blue-500 text-white px-4 py-2 rounded-md ml-2">
+            Next Page
+        </a
+    >
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}
+<div class="w-[1204px] h-[50px] relative scale-75">
+    <div class="w-[1204px] h-[749px] left-0 top-[-1px] absolute">
+        <img class="w-[1204px] h-[749px] left-0 top-0 absolute rounded-[14px] border-4 border-black" src="/static/mysite/bg.png">
+        <div class="w-[1204px] h-[58px] left-0 top-0 absolute bg-[#F1EBDD] rounded-t-[14px] border-4 border-black">
+            <div class="relative group">
+                <img class="w-[25px] h-[25px] left-[16px] top-[13px] absolute hover:hidden" src="/static/mysite/circle.png">
+                <img class="w-[25px] h-[25px] left-[16px] top-[13px] absolute hidden group-hover:flex" src="/static/mysite/close_hover.png">
+            </div>
+            <div class="relative group">
+                <img class="w-[25px] h-[25px] left-[50px] top-[13px] absolute hover:hidden" src="/static/mysite/circle.png">
+                <img class="w-[25px] h-[25px] left-[50px] top-[13px] absolute hidden group-hover:flex" src="/static/mysite/floating_hover.png">
+            </div>
+        </div>
+        <div class="w-[372px] h-[73px] left-[416px] top-[80px] absolute rounded-[14px] drop-shadow-[12px_10px_0px_rgba(0,0,0,1)]">
+            <div class="w-[372px] h-[73px] left-0 top-0 absolute bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black">
+                <div class="flex justify-center items-center pt-6 text-stone-900 text-[45px] font-bold font-['Roboto Mono'] leading-3 tracking-wider">
+                    BLOGS
+                </div>
+            </div>
+        </div>
+        <div class="w-[1087px] h-[161px] left-[58px] top-[200px] absolute scale-75">
+            {% for entry in entries %}
+            <div class="mb-8 bg-[#F1EBDD] text-stone-900 p-6 rounded-[14px] shadow-md flex">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-bold mb-4">
+                        {{ entry['properties']['Title']['title'][0]['text']['content'] }}
+                    </h2>
+                    <p class="text-gray-600 font-semibold">
+                        {{ entry['properties']['summary']['rich_text'][0]['text']['content'] }}
+                    </p>
+                    <!-- Display categories/tags -->
+                    <div class="mt-4">
+                        {% for category in entry['properties']['categories']['multi_select'] %}
+                        <span class="bg-stone-900 text-white px-3 py-2 rounded-full mr-2">
+                            {{ category['name'] }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="w-[380px] h-[92px] left-[412px] top-[588px] absolute bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black">
+        <div class=" text-center text-stone-900 font-bold font-['Roboto Mono'] leading-3 tracking-wider mt-5 flex justify-evenly ">
+            {% if page > 1 %}
+            <a href="{{ url_for('blog', page=page-1) }}" class="bg-stone-900 text-[#F1EBDD] rounded-[14px] text-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
+                Previous
+            </a
+    >
+            {% endif %} {% if has_next_page %}
+            <a href="{{ url_for('blog', page=page+1) }}" class="bg-stone-900 text-[#F1EBDD] rounded-[14px] text-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
+                Next
+            </a
+    >
+            {% endif %}
+        </div>
+    </div>
+</div>

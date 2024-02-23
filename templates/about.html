@@ -1,0 +1,26 @@
+{% extends "moyemoye.html" %}
+{% block content %}
+
+<div class="flex justify-start items-start scale-75 md:scale-100">
+<div class="w-[329px] h-[595px] relative scale-50 md:scale-75">
+    <div class="w-[329px] h-[595px] left-0 top-0 absolute bg-[url('/static/mysite/bg.png')] bg-cover bg-center rounded-[14px] drop-shadow-[12px_10px_0px_rgba(0,0,0,1)] border-4 border-black"></div>
+    <img class="w-[91px] h-[90px] left-[118px] top-[25px] absolute" src="/static/me.png">
+    <div class="w-[260px] h-[73px] left-[27px] top-[146px] absolute">
+        <div class="w-[265px] h-[304px] left-0 top-0 absolute">
+            <div class="w-[275px] h-[304px] left-0 top-0 absolute bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black"></div>
+            <div class="w-[156px] h-[35px] left-[56px] top-[25px] absolute text-center text-stone-900 text-[27px] font-bold font-['Roboto Mono'] leading-3 tracking-wide">HI !</div>
+            <div class="w-[232px] h-[213px] left-[18px] top-[73px] absolute text-center text-stone-900 text-base font-bold font-['Roboto Mono'] leading-[19px] tracking-wide">Recent engineering graduate with expertise in B.tech IT, eager to apply skills and fresh perspective to contribute to innovative projects in a dynamic professional environment.<br/></div>
+        </div>
+        
+        <a href="{{url_for('hireme')}}" class="pointer">
+        <div class="w-[100px] h-[41px] left-[86px] top-[360px] absolute">
+            <div class="pointer w-[100px] h-[41px] left-0 top-0 absolute bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-black"></div>
+            <button class="pointer w-[87px] h-3 left-[6px] top-[15px] absolute text-center text-stone-900 text-sm font-bold font-['Roboto Mono'] leading-3 tracking-wide">hire me!</button>
+        </div>
+        </a>
+    </div>
+</div>
+
+</div>
+
+{% endblock content %}

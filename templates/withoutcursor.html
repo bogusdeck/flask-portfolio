@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOYE MOYE</title>
+    <link rel="icon" href="/static/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .normal-cursor {
+        cursor: url('/static/cursor.png'), auto;
+      }
+  
+      .pointer{
+        cursor: url('/static/cursor-click.png'), auto;
+      }
+    </style>
+  </head>
+  <body class="normal-cursor">
+    <nav class="p-1 fixed top-3 w-full z-10">
+      <div class="mx-4 bg-stone-200 rounded-xl border-4 border-gray-800">
+        <div class="container mx-auto flex items-center justify-between">
+          <div class="flex space-x-4 items-center">
+            <!-- Container 1 -->
+            <div class="text-white  rounded-md">
+              <!-- Logo -->
+              <div class="logo md:hidden p-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="21"
+                  viewBox="0 0 22 21"
+                  fill="none"
+                >
+                  <rect
+                    x="6"
+                    y="16"
+                    width="13"
+                    height="5"
+                    rx="1"
+                    fill="#1E1E1E"
+                  />
+                  <path
+                    d="M7 21C6.44772 21 6 20.5523 6 20L6 1C6 0.447716 6.44772 0 7 0H11C11.5523 0 12 0.447716 12 1V20C12 20.5523 11.5523 21 11 21H7Z"
+                    fill="#1E1E1E"
+                  />
+                  <rect y="5" width="22" height="6" rx="1" fill="#1E1E1E" />
+                </svg>
+
+              </div>
+              <div class="hidden md:flex space-x-4 pl-4">
+                <div class="logo pointer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="21"
+                    viewBox="0 0 22 21"
+                    fill="none"
+                  >
+                    <rect
+                      x="6"
+                      y="16"
+                      width="13"
+                      height="5"
+                      rx="1"
+                      fill="#1E1E1E"
+                    />
+                    <path
+                      d="M7 21C6.44772 21 6 20.5523 6 20L6 1C6 0.447716 6.44772 0 7 0H11C11.5523 0 12 0.447716 12 1V20C12 20.5523 11.5523 21 11 21H7Z"
+                      fill="#1E1E1E"
+                    />
+                    <rect y="5" width="22" height="6" rx="1" fill="#1E1E1E" />
+                  </svg>
+  
+                </div>
+                <a href="#" class="pointer text-black hover:underline">Home</a>
+                <a href="#" class="pointer text-black hover:underline">About</a>
+                <a href="#" class="pointer text-black hover:underline">Blog</a>
+                <a href="#" class="pointer text-black hover:underline">Projects</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Container 2 -->
+          <div class="rounded-md">
+            <div class="w-[109px] h-8 text-center text-neutral-800 flex items-center justify-center text-base font-bold font-['Roboto Mono'] leading-[15px]">/home/fun</div>
+          </div>
+
+          <!-- Container 3 -->
+          <div class="rounded-md hidden md:flex">
+            <div
+              class="w-[180px] h-8 text-center flex items-center justify-center text-neutral-800 text-sm font-bold font-['Roboto Mono'] leading-3"
+            >
+              Sat Oct 16 11:28 AM
+            </div>
+          </div>
+
+          <!-- Responsive Menu (Hidden on Larger Screens) -->
+          <div class="md:hidden pt-[8px] pr-1"2222>
+            <button id="menu-toggle" class="text-black">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="22"
+                height="22"
+                viewBox="0 0 22 21"
+                version="1.1"
+              >
+                <title>menu_navigation_grid [#1529]</title>
+                <desc>Created with Sketch</desc>
+                <defs></defs>
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <g
+                    id="Dribbble-Light-Preview"
+                    transform="translate(-99.000000, -200.000000)"
+                    fill="#000000"
+                  >
+                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                      <path
+                        d="M60.85,51 L57.7,51 C55.96015,51 54.55,52.343 54.55,54 L54.55,57 C54.55,58.657 55.96015,60 57.7,60 L60.85,60 C62.58985,60 64,58.657 64,57 L64,54 C64,52.343 62.58985,51 60.85,51 M49.3,51 L46.15,51 C44.41015,51 43,52.343 43,54 L43,57 C43,58.657 44.41015,60 46.15,60 L49.3,60 C51.03985,60 52.45,58.657 52.45,57 L52.45,54 C52.45,52.343 51.03985,51 49.3,51 M60.85,40 L57.7,40 C55.96015,40 54.55,41.343 54.55,43 L54.55,46 C54.55,47.657 55.96015,49 57.7,49 L60.85,49 C62.58985,49 64,47.657 64,46 L64,43 C64,41.343 62.58985,40 60.85,40 M52.45,43 L52.45,46 C52.45,47.657 51.03985,49 49.3,49 L46.15,49 C44.41015,49 43,47.657 43,46 L43,43 C43,41.343 44.41015,40 46.15,40 L49.3,40 C51.03985,40 52.45,41.343 52.45,43"
+                        id="menu_navigation_grid-[#1529]"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="bg-image absolute top-0 left-0 right-0 w-full h-full bg-cover bg-center z-0"
+      style="background-image: url('/static/mysite/bg.png')"
+    ></div>
+
+    <div class="flex">
+      <div class="w-11/12 h-screen fixed top-14 gap-44 left-0 text-neutral-800 text-center flex flex-col">
+        <p>Main Content</p>
+      </div>
+  
+      <!-- Sidebar -->
+      <div class="w-1/12 h-screen bg-gray-200 fixed top-14 right-0 text-neutral-800 text-center flex flex-col">
+        <div class="topsidebar h-4/6 bg-red-200 space-y-2 flex flex-col items-center justify-start">
+          <div class="w-[75px] h-[105px] scale-50 md:scale-75 space-y-2 mt-4 relative">
+            <img class="w-[73px] h-[73px] left-0 top-0 absolute " src="/static/mysite/desktop.png" />
+            <div class="w-[73px] h-6 left-[2px] top-[81px] absolute text-center text-[17px] font-bold font-['Roboto Mono'] leading-3">Desktop</div>
+          </div>
+        
+          <div class="w-[94px] h-[105px] scale-50 md:scale-75  space-y-2 relative">
+            <img class="w-[81px] h-[73px] left-[5px] top-0 absolute" src="/static/mysite/folder.png" />
+            <div class="w-[94px] h-6 left-[2.5px] top-[81px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3">Downloads</div>
+          </div>
+  
+          <div class="w-[87px] h-[105px] scale-50 md:scale-75  space-y-2 relative">
+            <img class="w-[60px] h-[73px] left-[11px] top-0 absolute" src="/static/mysite/internet.png" />
+            <div class="w-[87px] h-6 left-0 top-[81px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3">Internet</div>
+          </div>
+  
+          <div class="w-[87px] h-[97px] scale-50 md:scale-75 space-y-2 relative">
+            <img class="w-[65px] h-[65px] left-[10px] top-[5px] absolute" src="/static/mysite/music.png" />
+            <div class="w-[87px] h-6 left-0 top-[81px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3">Music</div>
+          </div>
+        </div>
+
+        <div class="bottomsidebar h-1/4 bg-blue-300 flex flex-col items-center justify-end ">
+          <div class="w-[73px] h-[104px] space-y-2 scale-50 md:scale-75 relative mb-3">
+            <img class="w-[67px] h-[74px] left-0 top-0 absolute" src="/static/mysite/trashbin.png" />
+            <div class="w-[73px] h-6 left-0 top-[80px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3">My Life</div>
+          </div>
+        </div>
+
+
+
+        
+        
+      </div>
+    </div>
+
+    <!-- The rest of your content goes here -->
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOYE MOYE</title>
+    <link rel="icon" href="/static/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="">
+    <nav class="p-1 fixed top-3 w-full z-10">
+      <div class="mx-4 bg-stone-200 rounded-xl border-4 border-gray-800">
+        <div class="container mx-auto flex items-center justify-between">
+          <div class="flex space-x-4 items-center">
+            <!-- Container 1 -->
+            <div class="text-white  rounded-md">
+              <!-- Logo -->
+              <div class="logo md:hidden p-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="21"
+                  viewBox="0 0 22 21"
+                  fill="none"
+                >
+                  <rect
+                    x="6"
+                    y="16"
+                    width="13"
+                    height="5"
+                    rx="1"
+                    fill="#1E1E1E"
+                  />
+                  <path
+                    d="M7 21C6.44772 21 6 20.5523 6 20L6 1C6 0.447716 6.44772 0 7 0H11C11.5523 0 12 0.447716 12 1V20C12 20.5523 11.5523 21 11 21H7Z"
+                    fill="#1E1E1E"
+                  />
+                  <rect y="5" width="22" height="6" rx="1" fill="#1E1E1E" />
+                </svg>
+
+              </div>
+              <div class="hidden md:flex space-x-4 pl-4">
+                <div class="logo">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="21"
+                    viewBox="0 0 22 21"
+                    fill="none"
+                  >
+                    <rect
+                      x="6"
+                      y="16"
+                      width="13"
+                      height="5"
+                      rx="1"
+                      fill="#1E1E1E"
+                    />
+                    <path
+                      d="M7 21C6.44772 21 6 20.5523 6 20L6 1C6 0.447716 6.44772 0 7 0H11C11.5523 0 12 0.447716 12 1V20C12 20.5523 11.5523 21 11 21H7Z"
+                      fill="#1E1E1E"
+                    />
+                    <rect y="5" width="22" height="6" rx="1" fill="#1E1E1E" />
+                  </svg>
+  
+                </div>
+                <a href="#" class="text-black hover:underline">About</a>
+                <a href="#" class="text-black hover:underline">Blog</a>
+                <a href="#" class="text-black hover:underline">Projects</a>
+                <a href="#" class="text-black hover:underline">Home</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Container 2 -->
+          <div class="rounded-md">
+            <div class="w-[109px] h-8 text-center text-neutral-800 flex items-center justify-center text-base font-bold font-['Roboto Mono'] leading-[15px]">/home/fun</div>
+          </div>
+
+          <!-- Container 3 -->
+          <div class="rounded-md hidden md:flex">
+            <div
+              class="w-[180px] h-8 text-center flex items-center justify-center text-neutral-800 text-sm font-bold font-['Roboto Mono'] leading-3"
+            >
+              Sat Oct 16 11:28 AM
+            </div>
+          </div>
+
+          <!-- Responsive Menu (Hidden on Larger Screens) -->
+          <div class="md:hidden pt-[8px] pr-1"2222>
+            <button id="menu-toggle" class="text-black">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="22"
+                height="22"
+                viewBox="0 0 22 21"
+                version="1.1"
+              >
+                <title>menu_navigation_grid [#1529]</title>
+                <desc>Created with Sketch</desc>
+                <defs></defs>
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <g
+                    id="Dribbble-Light-Preview"
+                    transform="translate(-99.000000, -200.000000)"
+                    fill="#000000"
+                  >
+                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                      <path
+                        d="M60.85,51 L57.7,51 C55.96015,51 54.55,52.343 54.55,54 L54.55,57 C54.55,58.657 55.96015,60 57.7,60 L60.85,60 C62.58985,60 64,58.657 64,57 L64,54 C64,52.343 62.58985,51 60.85,51 M49.3,51 L46.15,51 C44.41015,51 43,52.343 43,54 L43,57 C43,58.657 44.41015,60 46.15,60 L49.3,60 C51.03985,60 52.45,58.657 52.45,57 L52.45,54 C52.45,52.343 51.03985,51 49.3,51 M60.85,40 L57.7,40 C55.96015,40 54.55,41.343 54.55,43 L54.55,46 C54.55,47.657 55.96015,49 57.7,49 L60.85,49 C62.58985,49 64,47.657 64,46 L64,43 C64,41.343 62.58985,40 60.85,40 M52.45,43 L52.45,46 C52.45,47.657 51.03985,49 49.3,49 L46.15,49 C44.41015,49 43,47.657 43,46 L43,43 C43,41.343 44.41015,40 46.15,40 L49.3,40 C51.03985,40 52.45,41.343 52.45,43"
+                        id="menu_navigation_grid-[#1529]"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="bg-image absolute top-0 left-0 right-0 w-full h-full bg-cover bg-center z-0"
+      style="background-image: url('/static/mysite/bg.png')"
+    ></div>
+
+    <div class="flex">
+      <div class="w-11/12 h-screen fixed top-14 gap-44 left-0 text-neutral-800 text-center flex flex-col">
+        <p>Main Content</p>
+      </div>
+  
+      <!-- Sidebar -->
+      <div class="w-1/12 h-screen bg-gray-200 fixed top-14 right-0 text-neutral-800 text-center flex flex-col">
+        <div class="topsidebar h-4/6 bg-red-200 space-y-2 flex flex-col items-center justify-start">
+          <div class="w-[75px] h-[105px] scale-50 md:scale-75 space-y-2 mt-4 relative">
+            <img class="w-[73px] h-[73px] left-0 top-0 absolute " src="/static/mysite/desktop.png" />
+            <div class="w-[73px] h-6 left-[2px] top-[81px] absolute text-center text-[17px] font-bold font-['Roboto Mono'] leading-3">Desktop</div>
+          </div>
+        
+          <div class="w-[94px] h-[105px] scale-50 md:scale-75  space-y-2 relative">
+            <img class="w-[81px] h-[73px] left-[5px] top-0 absolute" src="/static/mysite/folder.png" />
+            <div class="w-[94px] h-6 left-[2.5px] top-[81px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3">Downloads</div>
+          </div>
+  
+          <div class="w-[87px] h-[105px] scale-50 md:scale-75  space-y-2 relative">
+            <img class="w-[60px] h-[73px] left-[11px] top-0 absolute" src="/static/mysite/internet.png" />
+            <div class="w-[87px] h-6 left-0 top-[81px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3">Internet</div>
+          </div>
+  
+          <div class="w-[87px] h-[97px] scale-50 md:scale-75 space-y-2 relative">
+            <img class="w-[65px] h-[65px] left-[10px] top-[5px] absolute" src="/static/mysite/music.png" />
+            <div class="w-[87px] h-6 left-0 top-[81px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3">Music</div>
+          </div>
+        </div>
+
+        <div class="bottomsidebar h-1/4 bg-blue-300 flex flex-col items-center justify-end ">
+          <div class="w-[73px] h-[104px] space-y-2 scale-50 md:scale-75 relative mb-3">
+            <img class="w-[67px] h-[74px] left-0 top-0 absolute" src="/static/mysite/trashbin.png" />
+            <div class="w-[73px] h-6 left-0 top-[80px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3">My Life</div>
+          </div>
+        </div>
+
+
+
+        
+        
+      </div>
+    </div>
+
+    <!-- The rest of your content goes here -->
+  </body>
+</html>

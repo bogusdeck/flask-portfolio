@@ -1,0 +1,371 @@
+{'object': 'page', 'id': '83adcb95-2da5-4faf-8ee1-2b0d69cfdc81', 'created_time': '2024-01-21T07: 43: 00.000Z', 'last_edited_time': '2024-01-21T07: 48: 00.000Z', 'created_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f'
+    }, 'last_edited_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f'
+    }, 'cover': None, 'icon': None, 'parent': {'type': 'database_id', 'database_id': '076ee427-7258-4168-aac6-0bd2b8366ce6'
+    }, 'archived': False, 'properties': {'status': {'id': '%3FZdV', 'type': 'select', 'select': {'id': '73c6cd24-58fd-40df-87b1-2720eb4d5709', 'name': '✅ Published', 'color': 'green'
+            }
+        }, 'coverimg': {'id': 'F%7CSI', 'type': 'files', 'files': [
+                {'name': '╳⃪⃪⃟🕷𖥾̮᭡̸ː̫̈▬̷፝֟֯WELC0ME ¡! ⠀⠀⠀༼ᭆ█ᭆ🕷ᭆ█ᭆ༽ ⠀⠀𝄔𝄂𝄄𝄄𝄄𝄄𝄄𝄄⃝⃟𝄄𝄄… #random #Random #amreading #books #wattpad.jpeg', 
+                'type': 'file', 
+                'file': {
+                    'url': 'https: //prod-files-secure.s3.us-west-2.amazonaws.com/02e04135-fd1e-4e11-9ecf-ccbc4905260c/c35fd374-f86c-44c2-be0d-2f9caa7e9c10/WELC0ME_%21___random_Random_amreading_books_wattpad.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240121%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240121T081602Z&X-Amz-Expires=3600&X-Amz-Signature=0a70a491e53f6b249640cbd041c3cb78ac5a676d51300d7a673ec854c623c13d&X-Amz-SignedHeaders=host&x-id=GetObject', 
+                    'expiry_time': '2024-01-21T09: 16: 02.848Z'
+                    }
+                }
+            ]
+        }, 
+                    'LastEdited': {'id': 'QPCd', 'type': 'last_edited_time', 'last_edited_time': '2024-01-21T07: 48: 00.000Z'
+        }, 'categories': {'id': 'YnRw', 'type': 'multi_select', 'multi_select': [
+                {'id': 'd2858cb0-dc9b-4a85-9526-14d5b6534328', 'name': 'Coding', 'color': 'gray'
+                }
+            ]
+        }, 'route': {'id': '_dA%7C', 'type': 'select', 'select': None
+        }, 'published': {'id': 'jVWG', 'type': 'date', 'date': {'start': '2024-01-19', 'end': None, 'time_zone': None
+            }
+        }, 'summary': {'id': 'lLly', 'type': 'rich_text', 'rich_text': [
+                {'type': 'text', 'text': {'content': 'how to be a real sigma', 'link': None
+                    }, 'annotations': {'bold': False, 'italic': False, 'strikethrough': False, 'underline': False, 'code': False, 'color': 'default'
+                    }, 'plain_text': 'how to be a real sigma', 'href': None
+                }
+            ]
+        }, 'Author': {'id': 'qS~U', 'type': 'created_by', 'created_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f', 
+        'name': 'tanish vashisth', 
+        'avatar_url': 'https: //s3-us-west-2.amazonaws.com/public.notion-static.com/0c605853-7485-4d1d-845c-be14085ddb21/ecb2d0dd-1af4-447d-9606-8679a3a1af8d.jpeg', 
+        'type': 'person', 
+        'person': {'email': 'vashisth.tanish2069@gmail.com'
+                }
+            }
+        }, 
+        'Multi-select': {'id': 'uUDe', 'type': 'multi_select', 'multi_select': []
+        }, 
+        'Title': {'id': 'title', 'type': 'title', 'title': [
+                {'type': 'text', 'text': {'content': '101 sigma male guide ', 'link': None
+                    }, 'annotations': {'bold': False, 'italic': False, 'strikethrough': False, 'underline': False, 'code': False, 'color': 'default'
+                    }, 'plain_text': '101 sigma male guide ', 'href': None
+                }
+            ]
+        }
+    }, 'url': 'https: //www.notion.so/101-sigma-male-guide-83adcb952da54faf8ee12b0d69cfdc81', 
+    'public_url': None
+},
+{'object': 'page', 'id': 'fbe6f1ec-97f3-483c-8ab0-ddd8985a7ce8', 
+    'created_time': '2024-01-21T07: 39: 00.000Z', 
+    'last_edited_time': '2024-01-21T07: 43: 00.000Z', 
+    'created_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f'
+    }, 
+    'last_edited_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f'
+    }, 
+    'cover': None, 'icon': None, 'parent': {'type': 'database_id', 'database_id': '076ee427-7258-4168-aac6-0bd2b8366ce6'
+    }, 
+    'archived': False, 'properties': {'status': {'id': '%3FZdV', 'type': 'select', 'select': {'id': '73c6cd24-58fd-40df-87b1-2720eb4d5709', 
+    'name': '✅ Published', 'color': 'green'
+            }
+        }, 
+    'coverimg': {'id': 'F%7CSI', 'type': 'files', 'files': [
+                {'name': '1_ijIuN5xFKfqOFpoHuinq-g.jpg', 'type': 'file', 'file': {'url': 'https: //prod-files-secure.s3.us-west-2.amazonaws.com/02e04135-fd1e-4e11-9ecf-ccbc4905260c/4f0a326a-a4d8-484f-a73a-90eabeb2d9f4/1_ijIuN5xFKfqOFpoHuinq-g.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240121%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240121T081602Z&X-Amz-Expires=3600&X-Amz-Signature=d852cd143c205453e07e892cc58e6f2fea6bd9f11f933b78ea6ed6185e682d25&X-Amz-SignedHeaders=host&x-id=GetObject', 
+                    'expiry_time': '2024-01-21T09: 16: 02.848Z'
+                    }
+                }
+            ]
+        }, 
+                    'LastEdited': {'id': 'QPCd', 'type': 'last_edited_time', 'last_edited_time': '2024-01-21T07: 43: 00.000Z'
+        }, 
+                    'categories': {'id': 'YnRw', 'type': 'multi_select', 'multi_select': [
+                {'id': '77687169-dc6f-43a7-beb0-5b2fbd13bdc2', 'name': 'Side hustle', 'color': 'default'
+                },
+                {'id': 'd2858cb0-dc9b-4a85-9526-14d5b6534328', 'name': 'Coding', 'color': 'gray'
+                }
+            ]
+        }, 'route': {'id': '_dA%7C', 'type': 'select', 'select': None
+        }, 'published': {'id': 'jVWG', 'type': 'date', 'date': {'start': '2024-01-21', 'end': None, 'time_zone': None
+            }
+        }, 'summary': {'id': 'lLly', 'type': 'rich_text', 'rich_text': [
+                {'type': 'text', 'text': {'content': 'rich bana hai ? ah jao', 'link': None
+                    }, 'annotations': {'bold': False, 'italic': False, 'strikethrough': False, 'underline': False, 'code': False, 'color': 'default'
+                    }, 'plain_text': 'rich bana hai ? ah jao', 'href': None
+                }
+            ]
+        }, 'Author': {'id': 'qS~U', 'type': 'created_by', 'created_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f', 'name': 'tanish vashisth', 'avatar_url': 'https: //s3-us-west-2.amazonaws.com/public.notion-static.com/0c605853-7485-4d1d-845c-be14085ddb21/ecb2d0dd-1af4-447d-9606-8679a3a1af8d.jpeg', 
+            'type': 'person', 'person': {'email': 'vashisth.tanish2069@gmail.com'
+                }
+            }
+        }, 'Multi-select': {'id': 'uUDe', 'type': 'multi_select', 'multi_select': []
+        }, 'Title': {'id': 'title', 'type': 'title', 'title': [
+                {'type': 'text', 'text': {'content': 'how to become rich with tanish vashisth', 'link': None
+                    }, 'annotations': {'bold': False, 'italic': False, 'strikethrough': False, 'underline': False, 'code': False, 'color': 'default'
+                    }, 'plain_text': 'how to become rich with tanish vashisth', 'href': None
+                }
+            ]
+        }
+    }, 'url': 'https: //www.notion.so/how-to-become-rich-with-tanish-vashisth-fbe6f1ec97f3483c8ab0ddd8985a7ce8', 
+        'public_url': None
+},
+{'object': 'page', 'id': '1ed2884c-1ea5-4d51-9185-0de8744a38c9', 'created_time': '2024-01-15T14: 06: 00.000Z', 'last_edited_time': '2024-01-15T14: 06: 00.000Z', 'created_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f'
+    }, 'last_edited_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f'
+    }, 'cover': None, 'icon': None, 'parent': {'type': 'database_id', 'database_id': '076ee427-7258-4168-aac6-0bd2b8366ce6'
+    }, 'archived': False, 'properties': {'status': {'id': '%3FZdV', 'type': 'select', 'select': {'id': '73c6cd24-58fd-40df-87b1-2720eb4d5709', 'name': '✅ Published', 'color': 'green'
+            }
+        }, 'coverimg': {'id': 'F%7CSI', 'type': 'files', 'files': [
+                {'name': 'https: //images.unsplash.com/photo-1596526131083-e8c633c948d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80', 
+                    'type': 'external', 'external': {'url': 'https: //images.unsplash.com/photo-1596526131083-e8c633c948d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80'}}]}, 
+                    'LastEdited': {'id': 'QPCd', 'type': 'last_edited_time', 'last_edited_time': '2024-01-15T14: 06: 00.000Z'
+                        }, 'categories': {'id': 'YnRw', 'type': 'multi_select', 'multi_select': [
+                                {'id': '47d9debb-167c-477b-b698-55b6c32f4d35', 'name': 'React', 'color': 'red'
+                                },
+                                {'id': '161078ee-0f28-4707-a247-6b4766e58e15', 'name': 'API', 'color': 'green'
+                                }
+                            ]
+                        }, 'route': {'id': '_dA%7C', 'type': 'select', 'select': {'id': '5c5f3039-0d04-44b3-a3fb-29db9470d44c', 'name': 'articles', 'color': 'red'
+                            }
+                        }, 'published': {'id': 'jVWG', 'type': 'date', 'date': {'start': '2022-08-17', 'end': None, 'time_zone': None
+                            }
+                        }, 'summary': {'id': 'lLly', 'type': 'rich_text', 'rich_text': [
+                                {'type': 'text', 'text': {'content': 'How to make a subscription form with Tailwind and using Convertkit', 'link': None
+                                    }, 'annotations': {'bold': False, 'italic': False, 'strikethrough': False, 'underline': False, 'code': False, 'color': 'default'
+                                    }, 'plain_text': 'How to make a subscription form with Tailwind and using Convertkit', 'href': None
+                                }
+                            ]
+                        }, 'Author': {'id': 'qS~U', 'type': 'created_by', 'created_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f', 'name': 'tanish vashisth', 'avatar_url': 'https: //s3-us-west-2.amazonaws.com/public.notion-static.com/0c605853-7485-4d1d-845c-be14085ddb21/ecb2d0dd-1af4-447d-9606-8679a3a1af8d.jpeg', 
+                            'type': 'person', 'person': {'email': 'vashisth.tanish2069@gmail.com'
+                                }
+                            }
+                        }, 'Multi-select': {'id': 'uUDe', 'type': 'multi_select', 'multi_select': []
+                        }, 'Title': {'id': 'title', 'type': 'title', 'title': [
+                                {'type': 'text', 'text': {'content': 'React subscribe form with Tailwind using ConvertKit API', 'link': None
+                                    }, 'annotations': {'bold': False, 'italic': False, 'strikethrough': False, 'underline': False, 'code': False, 'color': 'default'
+                                    }, 'plain_text': 'React subscribe form with Tailwind using ConvertKit API', 'href': None
+                                }
+                            ]
+                        }
+                    }, 'url': 'https: //www.notion.so/React-subscribe-form-with-Tailwind-using-ConvertKit-API-1ed2884c1ea54d5191850de8744a38c9', 
+                        'public_url': None
+                },
+                {'object': 'page', 'id': '74fa9f9c-c9df-45f1-95e1-7bc2821e2dcd', 'created_time': '2024-01-15T14: 06: 00.000Z', 'last_edited_time': '2024-01-20T02: 56: 00.000Z', 'created_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f'
+                    }, 'last_edited_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f'
+                    }, 'cover': None, 'icon': None, 'parent': {'type': 'database_id', 'database_id': '076ee427-7258-4168-aac6-0bd2b8366ce6'
+                    }, 'archived': False, 'properties': {'status': {'id': '%3FZdV', 'type': 'select', 'select': {'id': 'cca3d62d-773b-4017-aeea-73f59e21ed17', 'name': '✏️ Draft', 'color': 'red'
+                            }
+                        }, 'coverimg': {'id': 'F%7CSI', 'type': 'files', 'files': [
+                                {'name': 'https: //images.unsplash.com/photo-1531686264889-56fdcabd163f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80', 
+                                    'type': 'external', 'external': {'url': 'https: //images.unsplash.com/photo-1531686264889-56fdcabd163f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80'}}]}, 
+                                    'LastEdited': {'id': 'QPCd', 'type': 'last_edited_time', 'last_edited_time': '2024-01-20T02: 56: 00.000Z'
+                                        }, 'categories': {'id': 'YnRw', 'type': 'multi_select', 'multi_select': [
+                                                {'id': 'ed857822-d1f0-48dc-bc33-4c62a2f099da', 'name': 'Javascript', 'color': 'purple'
+                                                },
+                                                {'id': '47d9debb-167c-477b-b698-55b6c32f4d35', 'name': 'React', 'color': 'red'
+                                                }
+                                            ]
+                                        }, 'route': {'id': '_dA%7C', 'type': 'select', 'select': {'id': '5c5f3039-0d04-44b3-a3fb-29db9470d44c', 'name': 'articles', 'color': 'red'
+                                            }
+                                        }, 'published': {'id': 'jVWG', 'type': 'date', 'date': {'start': '2022-08-17', 'end': None, 'time_zone': None
+                                            }
+                                        }, 'summary': {'id': 'lLly', 'type': 'rich_text', 'rich_text': [
+                                                {'type': 'text', 'text': {'content': 'How to make confetti effect with react-canvas-confetti package in React.', 'link': None
+                                                    }, 'annotations': {'bold': False, 'italic': False, 'strikethrough': False, 'underline': False, 'code': False, 'color': 'default'
+                                                    }, 'plain_text': 'How to make confetti effect with react-canvas-confetti package in React.', 'href': None
+                                                }
+                                            ]
+                                        }, 'Author': {'id': 'qS~U', 'type': 'created_by', 'created_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f', 'name': 'tanish vashisth', 'avatar_url': 'https: //s3-us-west-2.amazonaws.com/public.notion-static.com/0c605853-7485-4d1d-845c-be14085ddb21/ecb2d0dd-1af4-447d-9606-8679a3a1af8d.jpeg', 
+                                            'type': 'person', 'person': {'email': 'vashisth.tanish2069@gmail.com'
+                                                }
+                                            }
+                                        }, 'Multi-select': {'id': 'uUDe', 'type': 'multi_select', 'multi_select': []
+                                        }, 'Title': {'id': 'title', 'type': 'title', 'title': [
+                                                {'type': 'text', 'text': {'content': 'How to make Confetti with React in 5 minutes 🎉', 'link': None
+                                                    }, 'annotations': {'bold': False, 'italic': False, 'strikethrough': False, 'underline': False, 'code': False, 'color': 'default'
+                                                    }, 'plain_text': 'How to make Confetti with React in 5 minutes 🎉', 'href': None
+                                                }
+                                            ]
+                                        }
+                                    }, 'url': 'https: //www.notion.so/How-to-make-Confetti-with-React-in-5-minutes-74fa9f9cc9df45f195e17bc2821e2dcd', 
+                                        'public_url': None
+                                },
+                                {'object': 'page', 'id': '9b84902c-71de-45d7-b432-c6fcf9106204', 'created_time': '2024-01-15T14: 06: 00.000Z', 'last_edited_time': '2024-01-15T14: 06: 00.000Z', 'created_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f'
+                                    }, 'last_edited_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f'
+                                    }, 'cover': None, 'icon': None, 'parent': {'type': 'database_id', 'database_id': '076ee427-7258-4168-aac6-0bd2b8366ce6'
+                                    }, 'archived': False, 'properties': {'status': {'id': '%3FZdV', 'type': 'select', 'select': {'id': '73c6cd24-58fd-40df-87b1-2720eb4d5709', 'name': '✅ Published', 'color': 'green'
+                                            }
+                                        }, 'coverimg': {'id': 'F%7CSI', 'type': 'files', 'files': [
+                                                {'name': 'https: //images.unsplash.com/photo-1525770041010-2a1233dd8152?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80', 
+                                                    'type': 'external', 'external': {'url': 'https: //images.unsplash.com/photo-1525770041010-2a1233dd8152?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80'}}]}, 
+                                                    'LastEdited': {'id': 'QPCd', 'type': 'last_edited_time', 'last_edited_time': '2024-01-15T14: 06: 00.000Z'
+                                                        }, 'categories': {'id': 'YnRw', 'type': 'multi_select', 'multi_select': [
+                                                                {'id': 'ed857822-d1f0-48dc-bc33-4c62a2f099da', 'name': 'Javascript', 'color': 'purple'
+                                                                },
+                                                                {'id': '47d9debb-167c-477b-b698-55b6c32f4d35', 'name': 'React', 'color': 'red'
+                                                                }
+                                                            ]
+                                                        }, 'route': {'id': '_dA%7C', 'type': 'select', 'select': {'id': '5c5f3039-0d04-44b3-a3fb-29db9470d44c', 'name': 'articles', 'color': 'red'
+                                                            }
+                                                        }, 'published': {'id': 'jVWG', 'type': 'date', 'date': {'start': '2022-08-16', 'end': None, 'time_zone': None
+                                                            }
+                                                        }, 'summary': {'id': 'lLly', 'type': 'rich_text', 'rich_text': [
+                                                                {'type': 'text', 'text': {'content': 'In this post, I want to show you how to generate dynamic Open graph images with Next.js', 'link': None
+                                                                    }, 'annotations': {'bold': False, 'italic': False, 'strikethrough': False, 'underline': False, 'code': False, 'color': 'default'
+                                                                    }, 'plain_text': 'In this post, I want to show you how to generate dynamic Open graph images with Next.js', 'href': None
+                                                                }
+                                                            ]
+                                                        }, 'Author': {'id': 'qS~U', 'type': 'created_by', 'created_by': {'object': 'user', 'id': '5fa54e66-abba-4b8d-af9e-4b2ab450733f', 'name': 'tanish vashisth', 'avatar_url': 'https: //s3-us-west-2.amazonaws.com/public.notion-static.com/0c605853-7485-4d1d-845c-be14085ddb21/ecb2d0dd-1af4-447d-9606-8679a3a1af8d.jpeg', 
+                                                            'type': 'person', 'person': {'email': 'vashisth.tanish2069@gmail.com'
+                                                                }
+                                                            }
+                                                        }, 'Multi-select': {'id': 'uUDe', 'type': 'multi_select', 'multi_select': []
+                                                        }, 'Title': {'id': 'title', 'type': 'title', 'title': [
+                                                                {'type': 'text', 'text': {'content': 'Create Dynamic Open Graph images with Next.js', 'link': None
+                                                                    }, 'annotations': {'bold': False, 'italic': False, 'strikethrough': False, 'underline': False, 'code': False, 'color': 'default'
+                                                                    }, 'plain_text': 'Create Dynamic Open Graph images with Next.js', 'href': None
+                                                                }
+                                                            ]
+                                                        }
+                                                    }, 'url': 'https: //www.notion.so/Create-Dynamic-Open-Graph-images-with-Next-js-9b84902c71de45d7b432c6fcf9106204', 
+                                                        'public_url': None
+                                                }
+
+
+
+
+{
+   "object":"page",
+   "id":"83adcb95-2da5-4faf-8ee1-2b0d69cfdc81",
+   "created_time":"2024-01-21T07:43:00.000Z",
+   "last_edited_time":"2024-01-21T10:03:00.000Z",
+   "created_by":{
+      "object":"user",
+      "id":"5fa54e66-abba-4b8d-af9e-4b2ab450733f"
+   },
+   "last_edited_by":{
+      "object":"user",
+      "id":"5fa54e66-abba-4b8d-af9e-4b2ab450733f"
+   },
+   "cover":null,
+   "icon":null,
+   "parent":{
+      "type":"database_id",
+      "database_id":"076ee427-7258-4168-aac6-0bd2b8366ce6"
+   },
+   "archived":false,
+   "properties":{
+      "coverimage":{
+         "id":"%3CLcQ",
+         "type":"files",
+         "files":[
+            {
+               "name":"kevin-bhagat-zNRITe8NPqY-unsplash.jpg",
+               "type":"file",
+               "file":{
+                  "url":"https://prod-files-secure.s3.us-west-2.amazonaws.com/02e04135-fd1e-4e11-9ecf-ccbc4905260c/d142c5be-de90-4e2c-9eaf-780fe599dbe8/kevin-bhagat-zNRITe8NPqY-unsplash.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240121%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240121T205313Z&X-Amz-Expires=3600&X-Amz-Signature=4b7f7e858cb16798e2d79583c96349267e23fb064c1ea8bfd8cd9e3e2a87d027&X-Amz-SignedHeaders=host&x-id=GetObject",
+                  "expiry_time":"2024-01-21T21:53:13.301Z"
+               }
+            }
+         ]
+      },
+      "status":{
+         "id":"%3FZdV",
+         "type":"select",
+         "select":{
+            "id":"73c6cd24-58fd-40df-87b1-2720eb4d5709",
+            "name":"✅ Published",
+            "color":"green"
+         }
+      },
+      "LastEdited":{
+         "id":"QPCd",
+         "type":"last_edited_time",
+         "last_edited_time":"2024-01-21T10:03:00.000Z"
+      },
+      "categories":{
+         "id":"YnRw",
+         "type":"multi_select",
+         "multi_select":[
+            {
+               "id":"d2858cb0-dc9b-4a85-9526-14d5b6534328",
+               "name":"Coding",
+               "color":"gray"
+            }
+         ]
+      },
+      "route":{
+         "id":"_dA%7C",
+         "type":"select",
+         "select":null
+      },
+      "published":{
+         "id":"jVWG",
+         "type":"date",
+         "date":{
+            "start":"2024-01-19",
+            "end":null,
+            "time_zone":null
+         }
+      },
+      "summary":{
+         "id":"lLly",
+         "type":"rich_text",
+         "rich_text":[
+            {
+               "type":"text",
+               "text":{
+                  "content":"how to be a real sigma",
+                  "link":null
+               },
+               "annotations":{
+                  "bold":false,
+                  "italic":false,
+                  "strikethrough":false,
+                  "underline":false,
+                  "code":false,
+                  "color":"default"
+               },
+               "plain_text":"how to be a real sigma",
+               "href":null
+            }
+         ]
+      },
+      "Author":{
+         "id":"qS~U",
+         "type":"created_by",
+         "created_by":{
+            "object":"user",
+            "id":"5fa54e66-abba-4b8d-af9e-4b2ab450733f",
+            "name":"tanish vashisth",
+            "avatar_url":"https://s3-us-west-2.amazonaws.com/public.notion-static.com/0c605853-7485-4d1d-845c-be14085ddb21/ecb2d0dd-1af4-447d-9606-8679a3a1af8d.jpeg",
+            "type":"person",
+            "person":{
+               "email":"vashisth.tanish2069@gmail.com"
+            }
+         }
+      },
+      "Multi-select":{
+         "id":"uUDe",
+         "type":"multi_select",
+         "multi_select":[
+
+         ]
+      },
+      "Title":{
+         "id":"title",
+         "type":"title",
+         "title":[
+            {
+               "type":"text",
+               "text":{
+                  "content":"101 sigma male guide ",
+                  "link":null
+               },
+               "annotations":{
+                  "bold":false,
+                  "italic":false,
+                  "strikethrough":false,
+                  "underline":false,
+                  "code":false,
+                  "color":"default"
+               },
+               "plain_text":"101 sigma male guide ",
+               "href":null
+            }
+         ]
+      }
+   },
+   "url":"https://www.notion.so/101-sigma-male-guide-83adcb952da54faf8ee12b0d69cfdc81",
+   "public_url":null
+}
+
