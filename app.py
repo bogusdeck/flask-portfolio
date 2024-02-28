@@ -1,6 +1,8 @@
 import datetime
 import requests
+import firebase_admin
 from flask import Flask, render_template, redirect, url_for, flash, request, abort
+from firebase_admin import credentials, auth
 # from flask_pymongo import PyMongo
 # from flask_mongoengine import MongoEngine
 from flask_mail import Mail, Message
@@ -15,6 +17,10 @@ app = Flask(__name__)
 
 NOTION_API_KEY = "secret_JWOHlDkr92kgzI5eXLqNK90SuSEpWeU8uasvdDf8cyo"
 DATABASE_ID= "076ee42772584168aac60bd2b8366ce6" 
+FIREBASE_DATABASE_URL="https://portfolio-672ef-default-rtdb.firebaseio.com/"
+
+cred = credentials.Certificate("portfolio-672ef-firebase-adminsdk-nocvk-271944b24b.json")
+firebase_admin.initialize_app(cred)
 
 app.config['SECRET_KEY'] = '6e6cf3f875a3a73830d88caf'
 
@@ -61,6 +67,27 @@ def has_next_page(page, per_page):
     start_index = page * per_page
     return start_index < len(entries)
 
+@app.route("/submit_data", methods=['GET', 'POST'])
+def submit_data():
+    # Verify Firebase auth.
+    try:
+        id_token = request.cookies.get("token", "")
+        decoded_token = auth.verify_id_token(id_token)
+        uid = decoded_token['uid']
+        
+        # If the user is authenticated, allow data submission
+        if request.method == 'POST':
+            # Handle data submission
+            # Extract data from the request and store it in Firebase
+            return "Data submitted successfully!"
+        
+        return render_template('submit_data.html')
+    
+    except auth.InvalidIdTokenError as e:
+        return "Invalid token"
+    except auth.ExpiredIdTokenError as e:
+        return "Expired token"
+
 # class Blog(mongo.Document):
 #     title = mongo.StringField(max_length=200, required=True)
 #     content = mongo.StringField(required=True)
@@ -102,17 +129,17 @@ def blog():
     entries = get_entries_for_page(page, per_page)
     return render_template('blog.html', entries=entries, page=page, per_page=per_page, has_next_page=has_next_page(page, per_page), time=current_time, date=current_date)
 
-@app.route('/blog/<slug>')
-def blog_detail(slug):
-    entries = fetch_notion_data()
+# @app.route('/blog/<slug>')
+# def blog_detail(slug):
+#     entries = fetch_notion_data()
     
-    # Find the entry with the matching slug
-    selected_entry = next((entry for entry in entries if entry.get('slug') == slug), None)
+#     # Find the entry with the matching slug
+#     selected_entry = next((entry for entry in entries if entry.get('slug') == slug), None)
     
-    if not selected_entry:
-        abort(404)  # Return a 404 error if the entry with the specified slug is not found
+#     if not selected_entry:
+#         abort(404)  # Return a 404 error if the entry with the specified slug is not found
     
-    return render_template('blog_detail.html', entry=selected_entry)
+#     return render_template('blog_detail.html', entry=selected_entry)
 
 
 @app.route("/home")
@@ -149,6 +176,9 @@ def hireme():
         flash('Please enter the correct details', category="danger")
 
     return render_template("hireme.html", time=current_time, date=current_date, form=form)
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
