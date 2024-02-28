@@ -91,7 +91,10 @@ def hello():
 # @login_required
 # def admin():
 #     return render_template("moye.html")
-
+@app.route("/project")
+def project():
+    return render_template('project.html', time=current_time, date=current_date)
+    
 @app.route("/blog")
 def blog():
     page = request.args.get('page', default=1, type=int)

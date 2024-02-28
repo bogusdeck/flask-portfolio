@@ -77,7 +77,7 @@
                 <a href="{{url_for('home')}}" class="pointer text-black hover:underline">Home</a>
                 <a href="{{url_for('about')}}" class="pointer text-black hover:underline">About</a>
                 <a href="{{url_for('blog')}}" class="pointer text-black hover:underline">Blog</a>
-                <a href="#" class="pointer text-black hover:underline">Projects</a>
+                <a href="{{url_for('project')}}" class="pointer text-black hover:underline">Projects</a>
               </div>
             </div>
           </div>
@@ -161,7 +161,7 @@
 
     <div class="flex">
       <div
-        class="w-11/12 h-screen fixed top-14 left-0 text-neutral-800"
+        class="w-11/12 h-screen fixed top-1 md:top-14 left-0 text-neutral-800"
       > 
         {% with messages = get_flashed_messages(with_categories=true) %} {% if
         messages %} {% for category,message in messages %}
