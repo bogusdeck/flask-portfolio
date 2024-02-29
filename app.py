@@ -19,7 +19,7 @@ NOTION_API_KEY = "secret_JWOHlDkr92kgzI5eXLqNK90SuSEpWeU8uasvdDf8cyo"
 DATABASE_ID= "076ee42772584168aac60bd2b8366ce6" 
 FIREBASE_DATABASE_URL="https://portfolio-672ef-default-rtdb.firebaseio.com/"
 
-cred = credentials.Certificate("portfolio-672ef-firebase-adminsdk-nocvk-271944b24b.json")
+cred = credentials.Certificate("portfolio-672ef-firebase-adminsdk-nocvk-ba1b278397.json")
 firebase_admin.initialize_app(cred)
 
 app.config['SECRET_KEY'] = '6e6cf3f875a3a73830d88caf'
