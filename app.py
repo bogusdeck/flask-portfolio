@@ -2,7 +2,7 @@ import datetime
 import requests
 import firebase_admin
 from flask import Flask, render_template, redirect, url_for, flash, request, abort
-from firebase_admin import credentials, auth
+from firebase_admin import credentials, auth ,db
 # from flask_pymongo import PyMongo
 # from flask_mongoengine import MongoEngine
 from flask_mail import Mail, Message
@@ -17,10 +17,11 @@ app = Flask(__name__)
 
 NOTION_API_KEY = "secret_JWOHlDkr92kgzI5eXLqNK90SuSEpWeU8uasvdDf8cyo"
 DATABASE_ID= "076ee42772584168aac60bd2b8366ce6" 
-FIREBASE_DATABASE_URL="https://portfolio-672ef-default-rtdb.firebaseio.com/"
 
 cred = credentials.Certificate("portfolio-672ef-firebase-adminsdk-nocvk-ba1b278397.json")
-firebase_admin.initialize_app(cred)
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://portfolio-672ef-default-rtdb.firebaseio.com/'
+})
 
 app.config['SECRET_KEY'] = '6e6cf3f875a3a73830d88caf'
 
@@ -72,26 +73,26 @@ def get_projects():
     projects = projects_ref.get()
     return projects
 
-@app.route("/submit_data", methods=['GET', 'POST'])
-def submit_data():
-    # Verify Firebase auth.
-    try:
-        id_token = request.cookies.get("token", "")
-        decoded_token = auth.verify_id_token(id_token)
-        uid = decoded_token['uid']
+# @app.route("/submit_data", methods=['GET', 'POST'])
+# def submit_data():
+#     # Verify Firebase auth.
+#     try:
+#         id_token = request.cookies.get("token", "")
+#         decoded_token = auth.verify_id_token(id_token)
+#         uid = decoded_token['uid']
         
-        # If the user is authenticated, allow data submission
-        if request.method == 'POST':
-            # Handle data submission
-            # Extract data from the request and store it in Firebase
-            return "Data submitted successfully!"
+#         # If the user is authenticated, allow data submission
+#         if request.method == 'POST':
+#             # Handle data submission
+#             # Extract data from the request and store it in Firebase
+#             return "Data submitted successfully!"
         
-        return render_template('submit_data.html')
+#         return render_template('submit_data.html')
     
-    except auth.InvalidIdTokenError as e:
-        return "Invalid token"
-    except auth.ExpiredIdTokenError as e:
-        return "Expired token"
+#     except auth.InvalidIdTokenError as e:
+#         return "Invalid token"
+#     except auth.ExpiredIdTokenError as e:
+#         return "Expired token"
 
 # class Blog(mongo.Document):
 #     title = mongo.StringField(max_length=200, required=True)
@@ -128,10 +129,14 @@ def hello():
 def projects():
     # Retrieve data from Firebase
     projects = get_projects()
+    for item in projects:
+        print(item.title)
+        # print(item.url)
+
 
     # Pagination parameters
     page = request.args.get('page', 1, type=int)  # Current page number
-    per_page = 10  # Number of items per page
+    per_page = 3  # Number of items per page
     total_projects = len(projects) if projects else 0
     total_pages = (total_projects + per_page - 1) // per_page  # Total number of pages
 

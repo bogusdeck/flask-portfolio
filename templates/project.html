@@ -39,11 +39,11 @@
     <!-- Pagination -->
     <div class="my-8 flex justify-center items-center">
       {% if page > 1 %}
-      <a href="{{ url_for('project', page=page-1) }}" class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
+      <a href="{{ url_for('projects', page=page-1) }}" class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
           Previous Page
       </a>
       {% endif %} {% if has_next_page %}
-      <a href="{{ url_for('project', page=page+1) }}" class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
+      <a href="{{ url_for('projects', page=page+1) }}" class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
           Next Page
       </a>
       {% endif %}
