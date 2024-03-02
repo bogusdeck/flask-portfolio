@@ -67,6 +67,11 @@ def has_next_page(page, per_page):
     start_index = page * per_page
     return start_index < len(entries)
 
+def get_projects():
+    projects_ref = db.reference('projects')
+    projects = projects_ref.get()
+    return projects
+
 @app.route("/submit_data", methods=['GET', 'POST'])
 def submit_data():
     # Verify Firebase auth.
@@ -118,9 +123,27 @@ def hello():
 # @login_required
 # def admin():
 #     return render_template("moye.html")
-@app.route("/project")
-def project():
-    return render_template('project.html', time=current_time, date=current_date)
+
+@app.route('/projects', methods=['GET'])
+def projects():
+    # Retrieve data from Firebase
+    projects = get_projects()
+
+    # Pagination parameters
+    page = request.args.get('page', 1, type=int)  # Current page number
+    per_page = 10  # Number of items per page
+    total_projects = len(projects) if projects else 0
+    total_pages = (total_projects + per_page - 1) // per_page  # Total number of pages
+
+    # Calculate start and end index for slicing
+    start_index = (page - 1) * per_page
+    end_index = min(start_index + per_page, total_projects)
+
+    # Get projects for the current page
+    pagination_projects = list(projects.values())[start_index:end_index]
+
+    return render_template('project.html', projects=pagination_projects, page=page, per_page=per_page, total_pages=total_pages)
+
     
 @app.route("/blog")
 def blog():

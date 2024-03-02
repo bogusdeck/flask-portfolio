@@ -21,21 +21,33 @@
         </div>
     </div>
 
-    <a href="">
+    {% for entry in projects %}
+    <a href="{{ entry.url }}" target="_blank">
     <div class="m-8 bg-[#F1EBDD] text-stone-900 p-3 rounded-[14px] shadow-md flex border-2 border-black">
         <div class="flex-1">
             <h2 class="text-xl font-semibold mb-2">
-
+              {{ entry.title }}
             </h2>
             <p class="text-gray-600">
+              {{ entry.summary }}
             </p>
-            
-            
         </div>
     </div> 
     </a>
+    {% endfor %}
 
-   
+    <!-- Pagination -->
+    <div class="my-8 flex justify-center items-center">
+      {% if page > 1 %}
+      <a href="{{ url_for('project', page=page-1) }}" class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
+          Previous Page
+      </a>
+      {% endif %} {% if has_next_page %}
+      <a href="{{ url_for('project', page=page+1) }}" class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
+          Next Page
+      </a>
+      {% endif %}
+  </div>
     
 </div>
 
