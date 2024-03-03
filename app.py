@@ -129,11 +129,7 @@ def hello():
 def projects():
     # Retrieve data from Firebase
     projects = get_projects()
-    for item in projects:
-        print(item.title)
-        # print(item.url)
-
-
+   
     # Pagination parameters
     page = request.args.get('page', 1, type=int)  # Current page number
     per_page = 3  # Number of items per page
@@ -205,7 +201,9 @@ def hireme():
 
     return render_template("hireme.html", time=current_time, date=current_date, form=form)
 
-
+@app.route("/downloads")
+def downloads():
+    return render_template("downloads.html", time=current_time, date=current_date)
 
 
 if __name__ == "__main__":

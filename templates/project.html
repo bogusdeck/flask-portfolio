@@ -1,55 +1,62 @@
-{% extends "moyemoye.html" %} {% block content %} 
+{% extends "moyemoye.html" %} {% block content %}
 
 <div class="w-5/6 ml-5 rounded-[14px] border-4 border-black scale-75">
-    <!-- <img class="rounded-[14px] border-4 border-black" src="/static/mysite/bg.png"> -->
-    <div class="w-full flex justify-start items-start bg-[#F1EBDD] rounded-t-[11px] border-b-4 border-black ">
-      <div class="relative group">
-        <img class="m-[1.5px] scale-75" src="/static/mysite/circle.png">
-        <!-- <img class="" src="/static/mysite/close_hover.png"> -->
-      </div>
-      <div class="relative group">
-        <img class="m-[1.5px] scale-75" src="/static/mysite/circle.png">
-        <!-- <img class="" src="/static/mysite/floating_hover.png"> -->
-      </div>
+  <!-- <img class="rounded-[14px] border-4 border-black" src="/static/mysite/bg.png"> -->
+  <div
+    class="w-full flex justify-start items-start bg-[#F1EBDD] rounded-t-[11px] border-b-4 border-black"
+  >
+    <div class="relative group">
+      <img class="m-[1.5px] scale-75" src="/static/mysite/circle.png" />
+      <!-- <img class="" src="/static/mysite/close_hover.png"> -->
     </div>
-
-    <div class="flex justify-center items-center">
-        <div class="w-fit flex m-2 justify-center items-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black ">
-            <div class="flex justify-center items-center px-6 text-stone-900 text-[30px] font-bold font-['Roboto Mono']">
-                Projects
-            </div>
-        </div>
+    <div class="relative group">
+      <img class="m-[1.5px] scale-75" src="/static/mysite/circle.png" />
+      <!-- <img class="" src="/static/mysite/floating_hover.png"> -->
     </div>
-
-    {% for entry in projects %}
-    <a href="{{ entry.url }}" target="_blank">
-    <div class="m-8 bg-[#F1EBDD] text-stone-900 p-3 rounded-[14px] shadow-md flex border-2 border-black">
-        <div class="flex-1">
-            <h2 class="text-xl font-semibold mb-2">
-              {{ entry.title }}
-            </h2>
-            <p class="text-gray-600">
-              {{ entry.summary }}
-            </p>
-        </div>
-    </div> 
-    </a>
-    {% endfor %}
-
-    <!-- Pagination -->
-    <div class="my-8 flex justify-center items-center">
-      {% if page > 1 %}
-      <a href="{{ url_for('projects', page=page-1) }}" class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
-          Previous Page
-      </a>
-      {% endif %} {% if has_next_page %}
-      <a href="{{ url_for('projects', page=page+1) }}" class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
-          Next Page
-      </a>
-      {% endif %}
   </div>
-    
-</div>
 
+  <div class="flex justify-center items-center mt-4">
+    <div
+      class="w-fit flex m-2 justify-center items-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black"
+    >
+      <div
+        class="flex justify-center items-center px-6 text-stone-900 text-[30px] font-bold font-['Roboto Mono']"
+      >
+        Projects
+      </div>
+    </div>
+  </div>
+
+  {% for entry in projects %}
+  <a href="{{ entry.url }}" target="_blank">
+    <div
+      class="m-8 bg-[#F1EBDD] text-stone-900 p-3 rounded-[14px] shadow-md flex border-2 border-black"
+    >
+      <div class="flex-1">
+        <h2 class="text-xl font-semibold mb-2">{{ entry.title }}</h2>
+        <p class="text-gray-600">{{ entry.summary }}</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+
+
+  <!-- Pagination -->
+  <div class="my-8 flex justify-center items-center">
+    {% if page > 1 %}
+    <a href="{{ url_for('projects', page=page-1) }}"
+       class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
+      Previous Page
+    </a>
+    {% endif %} 
+    {% if page < total_pages %}
+    <a href="{{ url_for('projects', page=page+1) }}"
+       class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
+      Next Page
+    </a>
+    {% endif %}
+  </div>
+
+</div>
 
 {% endblock content %}
