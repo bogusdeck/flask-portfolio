@@ -1,11 +1,16 @@
 {% extends "moyemoye.html" %} {% block content %}
 <div class="container mx-auto py-8">
     <h1 class="text-3xl font-bold text-center mb-8">My Spotify Playlists</h1>
-    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    
+    <div class="grid gap-4 grid-cols-1 sm:grid-cols-3 lg:grid-cols-6">
         {% if playlists %}
         {% for playlist in playlists %}
         <div class="bg-white shadow-md rounded-md p-6">
-            <h2 class="text-lg font-semibold">{{ playlist.name }}</h2>
+            <img
+              class="pointer bg-gray-90 w-[100px] h-[100px]"
+              src="{{ playlist['images'][0]['url'] }}"
+            />
+            <h2 class="text-md font-semibold">{{ playlist.name }}</h2>
             <p class="text-gray-600">{{ playlist.description }}</p>
             <a href="{{ playlist.external_urls.spotify }}" target="_blank" class="text-green-600 mt-2 block">View on Spotify</a>
         </div>
@@ -16,3 +21,22 @@
     </div>
 </div>
 {% endblock content %}
+
+<!-- component -->
+<div class="h-screen flex items-center justify-center bg-gray-900">
+  
+    <!-- Card -->
+    <a class="hover:bg-gray-700 delay-50 duration-100 bg-gray-800 p-5 rounded-lg w-60 group" href="">
+      
+      <!-- Image Cover -->
+      <img src="https://picsum.photos/250/250" class="w-full rounded shadow" />
+      
+      <!-- Title -->
+      <h3 class="text-gray-200 font-bold mt-5"> Top 50 - Global</h3>
+      
+      <!-- Description -->
+      <p class="text-gray-400 font-light mt-2 text-xs"> Your daily update of the most played track from around the world...</p>
+      
+    </a>
+    
+  </div>

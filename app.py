@@ -31,6 +31,7 @@ app.config['SECRET_KEY'] = '6e6cf3f875a3a73830d88caf'
 CLIENT_ID = '764a7f7994f84da788a33f333cc5714c'
 CLIENT_SECRET = 'bf983ff1785940d8abc1455b22ee158f'
 REDIRECT_URI = 'http://localhost:5000/callback'
+user_id = '31rrr7lh7gubxpbngbjuns6iagte'
 auth_header = base64.b64encode(f"{CLIENT_ID}:{CLIENT_SECRET}".encode()).decode()
 
 # Mail config
@@ -230,7 +231,8 @@ def downloads():
 
 @app.route("/music.html")
 def music():
-    playlists_url = "https://api.spotify.com/v1/me/playlists"
+    user_id = '31rrr7lh7gubxpbngbjuns6iagte'
+    playlists_url = "https://api.spotify.com/v1/users/31rrr7lh7gubxpbngbjuns6iagte/playlists"
     at = spotify_access_token()
     print(at)
     headers = {'Authorization': f'Bearer {at}'}
