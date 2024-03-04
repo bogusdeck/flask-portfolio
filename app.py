@@ -31,6 +31,7 @@ app.config['SECRET_KEY'] = '6e6cf3f875a3a73830d88caf'
 CLIENT_ID = '764a7f7994f84da788a33f333cc5714c'
 CLIENT_SECRET = 'bf983ff1785940d8abc1455b22ee158f'
 REDIRECT_URI = 'http://localhost:5000/callback'
+auth_header = base64.b64encode(f"{CLIENT_ID}:{CLIENT_SECRET}".encode()).decode()
 
 # Mail config
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -45,6 +46,21 @@ app.config['MAIL_DEFAULT_SENDER'] = 'rockbottom0111@gmail.com'
 # login_manager = LoginManager(app)
 # admin = Admin(app, name='MyBlog', template_mode='bootstrap3')
 mail = Mail(app)
+
+def spotify_access_token():
+    token_url='https://accounts.spotify.com/api/token'
+    token_data={
+        'grant_type':'client_credentials'
+    }
+    token_headers={
+        'Authorization':f'Basic {auth_header}',
+        'Content-Type' : 'application/x-www-form-urlencoded'
+    }
+    response = requests.post(token_url, data=token_data, headers=token_headers)
+
+    access_token = response.json().get('access_token')
+    
+    return access_token
 
 def fetch_notion_data():
     url = f'https://api.notion.com/v1/databases/{DATABASE_ID}/query'
@@ -214,9 +230,23 @@ def downloads():
 
 @app.route("/music.html")
 def music():
-    playlists_url = "https://api.spotify.com/v1/users/spotify/playlists"
-    return render_template("music.html", time=current_date, date=current_date)
+    playlists_url = "https://api.spotify.com/v1/me/playlists"
+    at = spotify_access_token()
+    print(at)
+    headers = {'Authorization': f'Bearer {at}'}
+    response = requests.get(playlists_url, headers=headers)
+
+    if response.status_code == 200:
+        playlists_data = response.json().get('items',[])
+    else:
+        print(f"Failed to fetch playlists. Status code: {response.status_code}")
+        playlists_data = []
+
+    print(playlists_data)
+
+    return render_template("music.html",playlists=playlists_data, time=current_date, date=current_date)
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+    
