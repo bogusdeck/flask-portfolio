@@ -1,7 +1,9 @@
 import datetime
 import requests
+import base64
+import json
 import firebase_admin
-from flask import Flask, render_template, redirect, url_for, flash, request, abort
+from flask import Flask, render_template, redirect, url_for, flash, request, abort, session
 from firebase_admin import credentials, auth ,db
 # from flask_pymongo import PyMongo
 # from flask_mongoengine import MongoEngine
@@ -24,6 +26,11 @@ firebase_admin.initialize_app(cred, {
 })
 
 app.config['SECRET_KEY'] = '6e6cf3f875a3a73830d88caf'
+
+#spotify api credentials
+CLIENT_ID = '764a7f7994f84da788a33f333cc5714c'
+CLIENT_SECRET = 'bf983ff1785940d8abc1455b22ee158f'
+REDIRECT_URI = 'http://localhost:5000/callback'
 
 # Mail config
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -204,6 +211,11 @@ def hireme():
 @app.route("/downloads")
 def downloads():
     return render_template("downloads.html", time=current_time, date=current_date)
+
+@app.route("/music.html")
+def music():
+    playlists_url = "https://api.spotify.com/v1/users/spotify/playlists"
+    return render_template("music.html", time=current_date, date=current_date)
 
 
 if __name__ == "__main__":
