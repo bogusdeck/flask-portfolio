@@ -1,10 +1,10 @@
 {% extends "moyemoye.html" %} {% block content %}
 <div class="w-[1204px] h-[50px] relative scale-75">
-  <div class="w-[1204px] h-[749px] left-0 top-[-1px] absolute">
-    <img
+  <div class="w-[1204px] h-[749px] left-0 top-[-1px] absolute bg-[#121212] rounded-[14px]">
+    <!-- <img
       class="w-[1204px] h-[749px] left-0 top-0 absolute rounded-[14px] border-4 border-black"
       src="/static/mysite/bg.png"
-    />
+    /> -->
     <div
       class="w-[1204px] h-[60px] left-0 top-0 absolute bg-[#F1EBDD] rounded-t-[14px] border-4 border-black"
     >
@@ -37,9 +37,9 @@
         class="grid gap-4 sm:gap-3 lg:gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-6"
       >
         {% if playlists %} {% for playlist in playlists %}
-        <a href="{{ playlist.external_urls.spotify }}" class="pointer">
+        <a href="{{ url_for('playlist_detail', slug=playlist.id) }}" class="pointer">
           <div
-            class="bg-[#212121] shadow-md rounded-md p-3 w-[170px] h-[200px]"
+            class="hover:bg-[#535353] shadow-md rounded-md p-3 w-[170px] h-[200px]"
           >
             <img
               class="pointer bg-gray-90 w-[150px] h-[150px] rounded-md shadow-md"

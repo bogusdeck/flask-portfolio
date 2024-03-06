@@ -248,6 +248,25 @@ def music():
 
     return render_template("music.html",playlists=playlists_data, time=current_date, date=current_date)
 
+@app.route('/playlist/<slug>')
+def playlist_detail(slug):
+    playlist_id = slug
+
+    if not playlist_id:
+        abort(404)
+    
+    playlist_url = f"https://api.spotify.com/v1/playlists/{playlist_id}"
+    access_token = spotify_access_token()
+    headers = {'Authorization':f'Bearer {access_token}'}
+    response = requests.get(playlist_url, headers= headers)
+
+    if response.status_code==200:
+        playlist_data= response.json()
+        return render_template('playlist.html', playlist=playlist_data)
+    else:
+        abort(404)
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
