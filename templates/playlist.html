@@ -1,17 +1,36 @@
 {% extends "moyemoye.html" %}
 {% block content %}
-<div class="container mx-auto py-8">
-    <div class="flex h-screen">
-        <div class="w-1/5 bg-gray-800">
-            
+<div class="container mx-auto py-8 ">
+    <div class="flex flex-col h-fit">
+        <div class="flex-grow flex h-full">
+            <!-- Sidebar -->
+            <div class="w-1/4 bg-gray-800 text-white relative rounded-tl-[14px]">
+                <div class="flex flex-col items-center justify-center mt-9 "> 
+                    <ul class="space-y-4">
+                        <li class="text-gray-400 hover:text-white">home</li>
+                        <li class="text-gray-400 hover:text-white">search</li>
+                        <li class="text-gray-400 hover:text-white">Your Library</li>
+                        <li class="text-gray-400 hover:text-white">Create</li>
+                        <li class="text-gray-400 hover:text-white">liked songs</li>
+                        <li class="text-gray-400 hover:text-white">your episodes</li>
+                    </ul>
+                </div>
+                    
+            </div>
+            <!-- Main section -->
+            <div class="flex-grow bg-gray-900 relative rounded-tr-[14px]">
+                <div class="h-full flex items-center justify-center">
+                    <iframe src="https://open.spotify.com/embed/playlist/{{ playlist.id }}" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </div>
         </div>
-        <div class="flex-shrink bg-gray-900">
-            <iframe src="https://open.spotify.com/embed/playlist/{{ playlist.id }}" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <!-- Bottom bar within the container -->
+        <div class="bg-orange-400 py-4 rounded-b-[14px]">
+            <div class="container mx-auto flex justify-center">
+                <button class="bg-green-500 px-4 py-2 rounded-md text-white mr-4">Play</button>
+                <button class="bg-red-500 px-4 py-2 rounded-md text-white">Pause</button>
+            </div>
         </div>
     </div>
-    <div class="fixed bottom-0 w-full bg-gray-800">
-        moye moye
-    </div>
-    <h1 class="text-3xl font-bold text-center mb-8">{{ playlist.name }}</h1>
 </div>
 {% endblock %}
