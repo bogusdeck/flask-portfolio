@@ -1,34 +1,52 @@
 {% extends "moyemoye.html" %}
 {% block content %}
-<div class="container mx-auto py-8 ">
-    <div class="flex flex-col h-fit">
+<div class="container mx-auto py-8">
+    <div class="flex flex-col h-fit w-1/2">
         <div class="flex-grow flex h-full">
             <!-- Sidebar -->
-            <div class="w-1/4 bg-gray-800 text-white relative rounded-tl-[14px]">
-                <div class="flex flex-col items-center justify-center mt-9 "> 
+            <div class="w-1/4 bg-gray-800 text-white relative rounded-tl-[14px] border-white border-t-4 border-l-4">
+                <div class="flex flex-col items-center justify-center mt-9 mx-2 "> 
                     <ul class="space-y-4">
-                        <li class="text-gray-400 hover:text-white">home</li>
-                        <li class="text-gray-400 hover:text-white">search</li>
-                        <li class="text-gray-400 hover:text-white">Your Library</li>
-                        <li class="text-gray-400 hover:text-white">Create</li>
-                        <li class="text-gray-400 hover:text-white">liked songs</li>
-                        <li class="text-gray-400 hover:text-white">your episodes</li>
+                        <li class="flex text-gray-400 hover:text-white">
+                            <img class="w-[20px] h-[20px] pointer invert m-2 flex" src="/static/spotifyui/home.png"/>
+                            <p class="text-lg mt-[6px]">Home</p>
+                        </li>
+                        <li class="flex text-gray-400 hover:text-white">
+                            <img class="w-[20px] h-[20px] pointer invert m-2 flex" src="/static/spotifyui/search.png"/>
+                            <p class="text-lg  mt-[6px]">Search</p>
+                        </li>
+                        <li class="flex text-gray-400 hover:text-white">
+                            <img class="w-[20px] h-[20px] pointer invert m-2 flex" src="/static/spotifyui/lib.png"/>
+                            <p class="text-lg  mt-[6px]">Your library</p>
+                        </li>
+                        <li class="flex text-gray-400 hover:text-white">
+                            <img class="w-[20px] h-[20px] pointer invert m-2 flex" src="/static/spotifyui/plus.png"/>
+                            <p class="text-lg  mt-[6px]">Create</p>
+                        </li>
+                        <li class="flex text-gray-400 hover:text-white">
+                            <img class="w-[20px] h-[20px] pointer invert m-2 flex" src="/static/spotifyui/heart.png"/>
+                            <p class="text-lg  mt-[6px]">liked songs</p>
+                        </li>
+                        <li class="flex text-gray-400 hover:text-white">
+                            <img class="w-[24px] h-[24px] pointer invert m-2 flex" src="/static/spotifyui/episodes.png"/>
+                            <p class="text-lg mt-[6px]">Your episodes</p>
+                        </li>
                     </ul>
                 </div>
-                    
             </div>
             <!-- Main section -->
-            <div class="flex-grow bg-gray-900 relative rounded-tr-[14px]">
+            <div class="flex-grow bg-[#121212] relative rounded-tr-[14px] border-white border-r-4 border-t-4">
                 <div class="h-full flex items-center justify-center">
-                    <iframe src="https://open.spotify.com/embed/playlist/{{ playlist.id }}" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe id="spotifyPlayer" src="https://open.spotify.com/embed/playlist/{{ playlist.id }}" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </div>
             </div>
         </div>
         <!-- Bottom bar within the container -->
-        <div class="bg-orange-400 py-4 rounded-b-[14px]">
-            <div class="container mx-auto flex justify-center">
-                <button class="bg-green-500 px-4 py-2 rounded-md text-white mr-4">Play</button>
-                <button class="bg-red-500 px-4 py-2 rounded-md text-white">Pause</button>
+        <div class="bg-[#212121] py-4 rounded-b-[14px] border-white border-r-4 border-b-4 border-l-4 border-t-[#1db954] border-t-4">
+            <div class="container mx-auto flex justify-center space-x-10">
+                <img class="w-[25px] h-[25px] pointer invert m-2" src="/static/spotifyui/shuffle.png"/>
+                <img class="w-[20px] h-[20px] pointer invert m-2" src="/static/spotifyui/play.png"/>
+                <img class="w-[20px] h-[20px] pointer invert m-2" src="/static/spotifyui/pause.png"/>
             </div>
         </div>
     </div>
