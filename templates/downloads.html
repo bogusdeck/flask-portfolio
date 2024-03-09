@@ -1,54 +1,55 @@
 {% extends "moyemoye.html" %}
+{% block title %} /tools {% endblock title %}
 {% block content %}
-<div class="w-[1204px] h-[50px] relative scale-75">
-    <div class="w-[1204px] h-[749px] left-0 top-[-1px] absolute">
-        <img class="w-[1204px] h-[749px] left-0 top-0 absolute rounded-[14px] border-4 border-black" src="/static/mysite/bg.png">
-        <div class="w-[1204px] h-[60px] left-0 top-0 absolute bg-[#F1EBDD] rounded-t-[14px] border-4 border-black">
+<div class="w-[700px] h-[50px] left-40 top-10 relative  ">
+    <div class="w-[700px] h-[550px] left-0 top-[-1px] absolute">
+        <img class="w-[700px] h-[550px] left-0 top-0 absolute rounded-[14px] border-4 border-gray-900" src="/static/mysite/bg.png">
+        <div class="w-[700px] h-[40px] left-0 top-0 absolute bg-[#F1EBDD] rounded-t-[14px] border-4 border-gray-900">
             <div class="relative group">
-                <img class="w-[25px] h-[25px] left-[16px] top-[13px] absolute hover:hidden" src="/static/mysite/circle.png">
-                <img class="w-[25px] h-[25px] left-[16px] top-[13px] absolute hidden group-hover:flex" src="/static/mysite/close_hover.png">
+                <img class="w-[25px] h-[25px] left-[16px] top-[4px] absolute hover:hidden" src="/static/mysite/circle.png">
+                <img class="w-[25px] h-[25px] left-[16px] top-[4px] absolute hidden group-hover:flex" src="/static/mysite/close_hover.png">
             </div>
             <div class="relative group">
-                <img class="w-[25px] h-[25px] left-[50px] top-[13px] absolute hover:hidden" src="/static/mysite/circle.png">
-                <img class="w-[25px] h-[25px] left-[50px] top-[13px] absolute hidden group-hover:flex" src="/static/mysite/floating_hover.png">
+                <img class="w-[25px] h-[25px] left-[50px] top-[4px] absolute hidden group-hover:flex" src="/static/mysite/floating_hover.png">
+                <img class="w-[25px] h-[25px] left-[50px] top-[4px] absolute hover:hidden" src="/static/mysite/circle.png">
             </div>
         </div>
-        <div class="w-[372px] h-[73px] left-[416px] top-[80px] absolute rounded-[14px] drop-shadow-[12px_10px_0px_rgba(0,0,0,1)]">
-            <div class="w-[372px] h-[73px] left-0 top-0 absolute bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black">
-                <div class="flex justify-center items-center pt-6 text-stone-900 text-[45px] font-bold font-['Roboto Mono'] leading-3 tracking-wider">
+        <div class="w-[372px] h-[50px] left-[165px] top-[70px] absolute rounded-[14px] drop-shadow-[12px_10px_0px_rgba(0,0,0,1)]">
+            <div class="w-[372px] h-[50px] left-0 top-0 absolute bg-[#F1EBDD] rounded-[14px] shadow border-4 border-gray-900">
+                <div class="flex justify-center items-center pt-4 text-stone-900 text-[30px] font-bold font-['Roboto Mono'] leading-3 tracking-wider">
                     Tools
                 </div>
             </div>
         </div>
-        <div class="left-[240px] top-[250px] absolute grid grid-cols-3 gap-x-36 gap-y-14">
+        <div class="left-[27px] top-[170px] absolute grid grid-cols-3 gap-x-24 gap-y-14">
             <!-- Row 1 -->
             <a href="https://code.visualstudio.com/">
-                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black ">
+                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-gray-900 ">
                     <img src="/static/tools/vscode.png" alt="vscode">
                 </div>
             </a>
             <a href="https://discord.com/">
-                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black">
+                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-gray-900">
                     <img src="/static/tools/discord.png" alt="discord">
                 </div>
             </a>
             <a href="https://www.figma.com/">
-                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black">
+                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-gray-900">
                     <img src="/static/tools/figma.png" alt="figma">
                 </div>
             </a>
             <a href="https://neovim.io/">
-                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black">
+                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-gray-900">
                     <img src="/static/tools/neovim.png" alt="nvim">
                 </div>
             </a>
             <a href="https://archlinux.org/">
-                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black">
+                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-gray-900">
                     <img src="/static/tools/arch.png" alt="arch">
                 </div>
             </a>
             <a href="https://www.adobe.com/in/products/illustrator.html">
-                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black">
+                <div class="pointer w-[150px] p-4 flex items-center justify-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-gray-900">
                     <img src="/static/tools/adobe.png" alt="adobe illustrator">
                 </div>
             </a>

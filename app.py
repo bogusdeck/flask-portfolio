@@ -246,7 +246,7 @@ def music():
 
     print(playlists_data)
 
-    return render_template("music.html",playlists=playlists_data, time=current_date, date=current_date)
+    return render_template("music.html",playlists=playlists_data, time=current_time, date=current_date)
 
 @app.route('/playlist/<slug>')
 def playlist_detail(slug):
@@ -262,7 +262,7 @@ def playlist_detail(slug):
 
     if response.status_code==200:
         playlist_data= response.json()
-        return render_template('playlist.html', playlist=playlist_data)
+        return render_template('playlist.html', playlist=playlist_data, time=current_time, date=current_date)
     else:
         abort(404)
 

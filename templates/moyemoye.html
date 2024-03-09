@@ -116,9 +116,11 @@
           <!-- Container 2 -->
           <div class="rounded-md">
             <div
-              class="w-[109px] h-8 text-center text-neutral-800 flex items-center justify-center text-base font-bold font-['Roboto Mono'] leading-[15px]"
+              class="w-fit h-8 text-center text-neutral-800 flex items-center justify-center text-base font-bold font-['Roboto Mono'] leading-[15px]"
             >
+              {% block title %}
               /home/fun
+              {% endblock title %}
             </div>
           </div>
 
@@ -186,19 +188,19 @@
         <div class="flex items-center justify-center">
           {% if category == 'success' %}
           <div
-            class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-black"
+            class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-gray-900"
           >
             {{ message }}
           </div>
           {% elif category == 'info' %}
           <div
-            class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-black"
+            class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-gray-900"
           >
             {{ message }}
           </div>
           {% else %}
           <div
-            class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-black"
+            class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-gray-900"
           >
             {{ message }}
           </div>

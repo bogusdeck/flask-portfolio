@@ -1,9 +1,11 @@
-{% extends "moyemoye.html" %} {% block content %}
+{% extends "moyemoye.html" %}
+{% block title %} Project  {% endblock title %} 
+{% block content %}
 
-<div class="w-5/6 ml-5 rounded-[14px] border-4 border-black scale-75">
-  <!-- <img class="rounded-[14px] border-4 border-black" src="/static/mysite/bg.png"> -->
+<div class="w-2/5 h-fit left-16 top-14 relative rounded-[14px] border-4 border-gray-900 ">
+  <!-- <img class="rounded-[14px] border-4 border-gray-900" src="/static/mysite/bg.png"> -->
   <div
-    class="w-full flex justify-start items-start bg-[#F1EBDD] rounded-t-[11px] border-b-4 border-black"
+    class="w-full flex justify-start items-start bg-[#F1EBDD] rounded-t-[11px] border-b-4 border-gray-900"
   >
     <div class="relative group">
       <img class="m-[1.5px] scale-75" src="/static/mysite/circle.png" />
@@ -17,7 +19,7 @@
 
   <div class="flex justify-center items-center mt-4">
     <div
-      class="w-fit flex m-2 justify-center items-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-black"
+      class="w-fit flex m-2 justify-center items-center bg-[#F1EBDD] rounded-[14px] shadow border-4 border-gray-900"
     >
       <div
         class="flex justify-center items-center px-6 text-stone-900 text-[30px] font-bold font-['Roboto Mono']"
@@ -30,7 +32,7 @@
   {% for entry in projects %}
   <a href="{{ entry.url }}" target="_blank" class="flex items-center justify-center">
     <div
-      class="m-6 w-10/12 bg-[#F1EBDD] text-stone-900 p-3 rounded-[14px] shadow-md  border-black hover:scale-105"
+      class="m-6 w-10/12 bg-[#F1EBDD] text-stone-900 p-3 rounded-[14px] shadow-md  border-gray-900 hover:scale-105"
     >
       <div class="flex-1">
         <h2 class="text-xl font-bold mb-2 text-stone-900">{{ entry.title }}</h2>
@@ -45,13 +47,13 @@
   <div class="my-8 flex justify-center items-center">
     {% if page > 1 %}
     <a href="{{ url_for('projects', page=page-1) }}"
-       class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
+       class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-gray-900 px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
       Previous Page
     </a>
     {% endif %} 
     {% if page < total_pages %}
     <a href="{{ url_for('projects', page=page+1) }}"
-       class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-black px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
+       class="bg-[#F1EBDD] text-stone-900 rounded-[14px] m-2 font-bold shadow border-4 border-gray-900 px-4 py-2 justify-center items-center hover:drop-shadow-[10px_7px_0px_rgba(69,64,60,0.5)]">
       Next Page
     </a>
     {% endif %}
