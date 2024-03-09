@@ -266,6 +266,9 @@ def playlist_detail(slug):
     else:
         abort(404)
 
+@app.route('/internet')
+def internet():
+    return render_template("internet.html", time=current_time, date=current_date)
 
 
 if __name__ == "__main__":

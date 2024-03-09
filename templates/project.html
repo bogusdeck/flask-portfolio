@@ -28,9 +28,9 @@
   </div>
 
   {% for entry in projects %}
-  <a href="{{ entry.url }}" target="_blank">
+  <a href="{{ entry.url }}" target="_blank" class="flex items-center justify-center">
     <div
-      class="m-8 bg-[#F1EBDD] text-stone-900 p-3 rounded-[14px] shadow-md flex border-2 border-black"
+      class="m-6 w-10/12 bg-[#F1EBDD] text-stone-900 p-3 rounded-[14px] shadow-md  border-black hover:scale-105"
     >
       <div class="flex-1">
         <h2 class="text-xl font-bold mb-2 text-stone-900">{{ entry.title }}</h2>

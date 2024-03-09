@@ -6,6 +6,11 @@
     <title>MOYE MOYE</title>
     <link rel="icon" href="/static/favicon.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function showAlert() {
+        alert("lol it is a joke, don't take it seriously");
+      }
+    </script>
     <style>
       .normal-cursor {
         cursor: url("/static/cursor.png"), auto;
@@ -73,10 +78,26 @@
                     <rect y="5" width="22" height="6" rx="1" fill="#1E1E1E" />
                   </svg>
                 </div>
-                <a href="{{url_for('home')}}" class="pointer text-black hover:underline">Home</a>
-                <a href="{{url_for('about')}}" class="pointer text-black hover:underline">About</a>
-                <a href="{{url_for('blog')}}" class="pointer text-black hover:underline">Blog</a>
-                <a href="{{url_for('projects')}}" class="pointer text-black hover:underline">Projects</a>
+                <a
+                  href="{{url_for('home')}}"
+                  class="pointer text-black hover:underline"
+                  >Home</a
+                >
+                <a
+                  href="{{url_for('about')}}"
+                  class="pointer text-black hover:underline"
+                  >About</a
+                >
+                <a
+                  href="{{url_for('blog')}}"
+                  class="pointer text-black hover:underline"
+                  >Blog</a
+                >
+                <a
+                  href="{{url_for('projects')}}"
+                  class="pointer text-black hover:underline"
+                  >Projects</a
+                >
               </div>
             </div>
           </div>
@@ -151,8 +172,6 @@
       </div>
     </nav>
 
-    
-
     <div
       class="bg-image absolute top-0 left-0 right-0 w-full h-full bg-cover bg-center z-0"
       style="background-image: url('/static/mysite/bg.png')"
@@ -161,21 +180,32 @@
     <div class="flex">
       <div
         class="w-11/12 h-screen fixed top-1 md:top-14 left-0 text-neutral-800"
-      > 
+      >
         {% with messages = get_flashed_messages(with_categories=true) %} {% if
         messages %} {% for category,message in messages %}
         <div class="flex items-center justify-center">
           {% if category == 'success' %}
-          <div class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-black">{{ message }}</div>
+          <div
+            class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-black"
+          >
+            {{ message }}
+          </div>
           {% elif category == 'info' %}
-          <div class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-black">{{ message }}</div>
+          <div
+            class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-black"
+          >
+            {{ message }}
+          </div>
           {% else %}
-          <div class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-black">{{ message }}</div>
+          <div
+            class="pointer absolute top-4 text-center p-2 text-stone-900 text-sm font-bold font-['Roboto Mono'] bg-[#F1EBDD] rounded-[14px] drop-shadow-[7px_7px_0px_rgba(0,0,0,1)] shadow border-4 border-black"
+          >
+            {{ message }}
+          </div>
           {% endif %}
         </div>
-        {% endfor %} {% endif %} {% endwith %}
-        {% block content %}
-        {% endblock content%}
+        {% endfor %} {% endif %} {% endwith %} {% block content %} {% endblock
+        content%}
       </div>
 
       <!-- Sidebar -->
@@ -185,7 +215,8 @@
         <div
           class="topsidebar h-4/6 space-y-2 flex flex-col items-center justify-start"
         >
-          <a href="{{url_for('hello')}}"
+          <a
+            href="{{url_for('hello')}}"
             class="w-[75px] h-[105px] scale-50 md:scale-75 space-y-2 mt-4 relative pointer"
           >
             <img
@@ -200,7 +231,7 @@
           </a>
 
           <a
-            href="{{url_for("downloads")}}"
+            href="{{url_for('downloads')}}"
             class="w-[94px] h-[105px] scale-50 md:scale-75 space-y-2 relative pointer"
           >
             <img
@@ -214,35 +245,37 @@
             </div>
           </a>
 
-          <div
-            class="w-[87px] h-[105px] scale-50 md:scale-75 space-y-2 relative"
-          >
-            <img
-              class="pointer w-[60px] h-[73px] left-[11px] top-0 absolute"
-              src="/static/mysite/internet.png"
-            />
+          <a href="{{url_for('internet')}}">
             <div
-              class="pointer w-[87px] h-6 left-0 top-[81px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3"
+              class="w-[87px] h-[105px] scale-50 md:scale-75 space-y-2 relative"
             >
-              Internet
+              <img
+                class="pointer w-[60px] h-[73px] left-[11px] top-0 absolute"
+                src="/static/mysite/internet.png"
+              />
+              <div
+                class="pointer w-[87px] h-6 left-0 top-[81px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3"
+              >
+                Internet
+              </div>
             </div>
-          </div>
+          </a>
 
           <a href="{{url_for('music')}}">
-          <div
-            class="w-[87px] h-[97px] scale-50 md:scale-75 space-y-2 relative"
-          >
-            <img
-              class="pointer w-[65px] h-[65px] left-[10px] top-[5px] absolute"
-              src="/static/mysite/music.png"
-            />
             <div
-              class="pointer w-[87px] h-6 left-0 top-[81px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3"
+              class="w-[87px] h-[97px] scale-50 md:scale-75 space-y-2 relative"
             >
-              Music
+              <img
+                class="pointer w-[65px] h-[65px] left-[10px] top-[5px] absolute"
+                src="/static/mysite/music.png"
+              />
+              <div
+                class="pointer w-[87px] h-6 left-0 top-[81px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3"
+              >
+                Music
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
         </div>
 
         <div class="bottomsidebar h-1/4 flex flex-col items-center justify-end">
@@ -252,6 +285,7 @@
             <img
               class="pointer w-[67px] h-[74px] left-0 top-0 absolute"
               src="/static/mysite/trashbin.png"
+              onclick="showAlert()"
             />
             <div
               class="pointer w-[73px] h-6 left-0 top-[80px] absolute text-center text-stone-900 text-[17px] font-bold font-['Roboto Mono'] leading-3"
