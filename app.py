@@ -3,6 +3,7 @@ import requests
 import base64
 import json
 import firebase_admin
+from config import NOTION_API_KEY, DATABASE_ID, CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, MAIL_USERNAME, MAIL_PASSWORD
 from flask import Flask, render_template, redirect, url_for, flash, request, abort, session
 from firebase_admin import credentials, auth ,db
 # from flask_pymongo import PyMongo
@@ -17,8 +18,13 @@ from forms import HiremeForm
 
 app = Flask(__name__)
 
-NOTION_API_KEY = "secret_JWOHlDkr92kgzI5eXLqNK90SuSEpWeU8uasvdDf8cyo"
-DATABASE_ID= "076ee42772584168aac60bd2b8366ce6" 
+# NOTION_API_KEY = "your notion api key"
+# DATABASE_ID= "your notion database id" 
+
+#spotify api credentials
+# CLIENT_ID = 'your spotify client id'
+# CLIENT_SECRET = 'your spotify client secret'
+# REDIRECT_URI = 'http://localhost:5000/callback'
 
 cred = credentials.Certificate("portfolio-672ef-firebase-adminsdk-nocvk-ba1b278397.json")
 firebase_admin.initialize_app(cred, {
@@ -26,11 +32,6 @@ firebase_admin.initialize_app(cred, {
 })
 
 app.config['SECRET_KEY'] = '6e6cf3f875a3a73830d88caf'
-
-#spotify api credentials
-CLIENT_ID = '764a7f7994f84da788a33f333cc5714c'
-CLIENT_SECRET = 'bf983ff1785940d8abc1455b22ee158f'
-REDIRECT_URI = 'http://localhost:5000/callback'
 user_id = '31rrr7lh7gubxpbngbjuns6iagte'
 auth_header = base64.b64encode(f"{CLIENT_ID}:{CLIENT_SECRET}".encode()).decode()
 
@@ -38,8 +39,8 @@ auth_header = base64.b64encode(f"{CLIENT_ID}:{CLIENT_SECRET}".encode()).decode()
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'rockbottom0111@gmail.com'
-app.config['MAIL_PASSWORD'] = 'omyb xpzn oeok mdqy'
+# app.config['MAIL_USERNAME'] = 'your gmail account where you want to recieve mail'
+# app.config['MAIL_PASSWORD'] = 'your gmail api password access token'
 app.config['MAIL_DEFAULT_SENDER'] = 'rockbottom0111@gmail.com'
 
 # mongo = PyMongo(app)
