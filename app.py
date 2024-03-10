@@ -143,7 +143,7 @@ current_date = now.strftime("%a %b %d ")
 
 @app.route("/")
 def hello():
-    return render_template("moyemoye.html", time=current_time, date=current_date)
+    return render_template("index.html", time=current_time, date=current_date)
 
 # @app.route("/admin")
 # @login_required
