@@ -1,6 +1,7 @@
 # Flask Portfolio Website
 
 This project is a Flask-based portfolio website showcasing various features such as blog posts, projects, contact form, music playlists, etc.
+
 If you like my work, consider buying me a coffee! ☕️
 <div align="center">
 <a href="https://www.buymeacoffee.com/bogusdeck" target="_blank">
